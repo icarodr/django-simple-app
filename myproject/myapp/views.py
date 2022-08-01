@@ -12,12 +12,12 @@ def index(request):
             user = authenticate(request, username=cd['username'], password=cd['password'])
             if user is not None:
                 login(request, user)
-                return HttpResponse('<h1>DEU CERTO</h1>')
+                return HttpResponse('<h1>LOGADO(A)</h1>')
             else:
-                return HttpResponse('<h1>DEU ERRADO</h1>')
+                return HttpResponse('<h1>USUÁRIO OU SENHA INVÁLIDO(S)</h1>')
 
     credenciais = LoginForm()
     context = {
         'form':credenciais,
     }
-    return render(request,'diario/login.html',context)
+    return render(request,'home/login.html',context)
