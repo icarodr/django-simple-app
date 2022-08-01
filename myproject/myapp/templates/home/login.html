@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>passo a passo</title>
+</head>
+    <body>
+        <div class="loginBox">
+            <h1>FORMS DE CRIA 2.0</h1>
+            <form method = 'post'>
+                {% csrf_token %}
+                {{form.as_p}}
+                <button type="submit">Login</button>
+            </form>
+        </div>
+    </body>
+
+<!-- Estilo do Formulário -->
+
+    <style>
+        body{
+            background-image: linear-gradient(to right, purple, black);
+        }
+        .loginBox{
+            background-color: whitesmoke;
+            width: fit-content;
+            margin-left: 35%;
+            border-radius: 10px;
+        }
+        h1{
+            background-color: aquamarine;
+            color: purple;
+        }
+        button{
+            background-color: rgb(25, 237, 25);
+            margin-left: 75%;
+            height: 50px;
+            border-radius: 10px ;
+            font-size: 20px;
+        }
+    </style>
+</html>
